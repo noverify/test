@@ -2,11 +2,6 @@
 # -.- coding: utf-8 -.-
 # test.py
 
-"""
-Copyright (C) 2017-18 Nikolaos Kamarinakis (nikolaskam@gmail.com) & David Schütz (xdavid@protonmail.com)
-See License at nikolaskama.me (https://nikolaskama.me/kickthemoutproject)
-"""
-
 import os, sys, logging, math, traceback, optparse, threading
 from time import sleep
 BLUE, RED, WHITE, YELLOW, MAGENTA, GREEN, END = '\33[94m', '\033[91m', '\33[97m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m'
@@ -14,7 +9,7 @@ BLUE, RED, WHITE, YELLOW, MAGENTA, GREEN, END = '\33[94m', '\033[91m', '\33[97m'
 try:
     # check whether user is root
     if os.geteuid() != 0:
-        print("\n{}ERROR: KickThemOut muss gestartet werden mit root permissions. Versuche es nochmal mit:\n\t{}$ sudo python3 kickthemoutTEST.py{}\n".format(RED, GREEN, END))
+        print("\n{}ERROR: Das Programm muss gestartet werden mit root permissions. Versuche es nochmal mit:\n\t{}$ sudo python3 kickthemoutTEST.py{}\n".format(RED, GREEN, END))
         os._exit(1)
 except:
     # then user is probably on windows
@@ -169,7 +164,7 @@ def getDefaultInterfaceMAC():
     except:
         # request interface MAC address (after failed detection by kamene)
         print("\n{}ERROR: Default Interface MAC Address could not be obtained. Please enter MAC manually.{}\n".format(RED, END))
-        header = ('{}kickthemout{}> {}Enter MAC Address {}(MM:MM:MM:SS:SS:SS): '.format(BLUE, WHITE, RED, END))
+        header = ('{}test{}> {}Enter MAC Address {}(MM:MM:MM:SS:SS:SS): '.format(BLUE, WHITE, RED, END))
         return (input(header))
 
 
@@ -184,7 +179,7 @@ def getGatewayIP():
         # request gateway IP address (after failed detection by kamene)
         stopAnimation = True
         print("\n{}ERROR: Gateway IP could not be obtained. Please enter IP manually.{}\n".format(RED, END))
-        header = ('{}kickthemout{}> {}Enter Gateway IP {}(e.g. 192.168.1.1): '.format(BLUE, WHITE, RED, END))
+        header = ('{}test{}> {}Enter Gateway IP {}(e.g. 192.168.1.1): '.format(BLUE, WHITE, RED, END))
         return (input(header))
 
 
