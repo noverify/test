@@ -27,7 +27,7 @@
 ~/kickthemout ❯❯❯ sudo python3 kickthemout.py
 ```
 
-**WICHTIG**: Du brauchst dafür Homebrew (http://brew.sh/) Installier das bevor du das programm installierst 
+**WICHTIG**: Du brauchst dafür Homebrew (http://brew.sh/) Installier das bevor du das Programm installierst!
 
 ## ArchLinux Installation
 
@@ -38,13 +38,12 @@
 
 ~/kickthemout ❯❯❯ sudo -H pip3 install -r requirements.txt
 
-~/kickthemout ❯❯❯ sudo python3 kickthemout.py
+~/kickthemout ❯❯❯ sudo python3 test.py
 ```
-####################################################################################################
 
 # Verwendung
 ```
-Usage: sudo python3 kickthemout.py [options]
+Usage: sudo python3 test.py [options]
 
 Options:
   --version             show program's version number and exit
